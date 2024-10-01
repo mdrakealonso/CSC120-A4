@@ -1,4 +1,4 @@
-Use this file to record your reflection on this assignment.
-
 - What are your initial impressions of how `Encapsulation` affects your programming?
 - What worked, what didn't, what advice would you give someone taking this course in the future?
+
+At first I found the terms "public" and "private" a bit confusing (why choose one over the other, etc.), but I think writing this assignment helped me understand them, and encapsulation overall, a bit more. I guess the main reason to make something private is to prevent someone else from manipulating the code, and also stop them from entering random values that cause unintended effects. Encapsulation also somehow simultaneously makes code simpler (by packaging things up neatly) and more complex. I am still a bit unsure about making attributes public. In terms of what worked, I found this assignment to be pretty straightforward. I think that following the rubric and understanding how the classes function together can help a lot. One very important thing is to carefully consider situations that could be potentially problematic(e.g. what happens if you try to remove a passenger from a car they're not in). 
