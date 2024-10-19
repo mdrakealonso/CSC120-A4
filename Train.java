@@ -9,8 +9,16 @@ public class Train {
     private Engine engine;
     private ArrayList<Car> cars;
 
-    public Train(FuelType fuelType, double fuelCapacity, int nCars, int passengerCapacity) {
-        this.engine = new Engine(fuelType, fuelCapacity);
+    /**
+     * Constructor for the Train class
+     * @param fuelType Engine fuel type that is one of
+     *                 STEAM, INTERNAL_COMBUSTION, ELECTRIC, OTHER
+     * @param fuelCapacity Engine fuel capacity
+     * @param nCars desired number of Train Cars
+     * @param passengerCapacity desired passenger capacity for each Train Car
+     */
+    public Train(FuelType fuelType, double fuelCapacity, double currentFuel, int nCars, int passengerCapacity) {
+        this.engine = new Engine(fuelType, fuelCapacity, currentFuel);
         this.cars = new ArrayList<>();
         for(int i = 0; i < nCars; i++) {
             cars.add(new Car(passengerCapacity));
