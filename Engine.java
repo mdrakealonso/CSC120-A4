@@ -8,9 +8,17 @@ public class Engine {
     private double currentFuel;
     private double maxFuel;
 
-    public Engine(FuelType fuelType, double maxFuel) {
+    /**
+     * Constructor for the Engine class
+     * @param fuelType the fuel type of an Engine that is 
+     *                 one of STEAM, INTERNAL_COMBUSTION, ELECTRIC, OTHER
+     * @param maxFuel the fuel capacity of an Engine
+     * @param currentFuel the current fuel level of an Engine
+     */
+    public Engine(FuelType fuelType, double maxFuel, double currentFuel) {
         this.fuelType = fuelType;
         this.maxFuel = maxFuel;
+        this.currentFuel = currentFuel;
     }
 
     /**
@@ -40,8 +48,12 @@ public class Engine {
             return false;
         }
     }
+    /**
+     * Main method for the Engine class
+     * @param args array for command-line arguments
+     */
     public static void main(String[] args) {
-        Engine myEngine = new Engine(FuelType.ELECTRIC, 10.0);
+        Engine myEngine = new Engine(FuelType.ELECTRIC, 10.0, 7.0);
         while (myEngine.go()) {
             System.out.println("Choo choo!");
         }

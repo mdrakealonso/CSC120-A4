@@ -9,6 +9,10 @@ public class Car {
     private ArrayList<Passenger> passengers;
     private int maxCapacity;
 
+    /**
+     * Constructor for the Car class
+     * @param maxCapacity a maximum capacity for the Car
+     */
     public Car(int maxCapacity) {
         this.passengers = new ArrayList<>();
         this.maxCapacity = maxCapacity;
@@ -64,7 +68,7 @@ public class Car {
      * Prints the manifest of all Passengers on a Car, 
      * or "This car is EMPTY." if the Car has no Passengers
      */
-    void printManifest() {
+    public void printManifest() {
         if(passengers.isEmpty()) {
             System.out.println("This car is EMPTY.");
         } else {
@@ -74,6 +78,10 @@ public class Car {
         }
     }
 
+    /**
+     * Main method for the Car class
+     * @param args array for command-line arguments
+     */
     public static void main(String[] args) {
         Car myCar = new Car(1);
         Passenger newPassenger = new Passenger("Harry");
