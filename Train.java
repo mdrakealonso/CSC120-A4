@@ -14,6 +14,7 @@ public class Train {
      * @param fuelType Engine fuel type that is one of
      *                 STEAM, INTERNAL_COMBUSTION, ELECTRIC, OTHER
      * @param fuelCapacity Engine fuel capacity
+     * @param currentFuel an Engine's current fuel level
      * @param nCars desired number of Train Cars
      * @param passengerCapacity desired passenger capacity for each Train Car
      */
@@ -73,7 +74,7 @@ public class Train {
      * Prints the manifest of all Passengers on a Train, 
      * or "This train has NO CARS." if the Train has no Passenger Cars.
      */
-    void printManifest() {
+    public void printManifest() {
         if(cars.isEmpty()) {
             System.out.println("This train has NO CARS.");
         } else {

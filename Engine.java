@@ -38,7 +38,8 @@ public class Engine {
         if(currentFuel > 0){
             if(currentFuel - fuelDecrease < 0) {
                 currentFuel = 0;
-                return false;
+                System.out.println("You are out of fuel.");
+                return true;
             } else {
                 currentFuel-=fuelDecrease;
                 System.out.println("The remaining fuel level is: " + currentFuel);
